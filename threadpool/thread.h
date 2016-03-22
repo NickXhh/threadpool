@@ -129,10 +129,9 @@ bool Thread::Start(void * pParams)
 	m_sThreadParam.pBaseThread = this;
 	m_sThreadParam.lpParam = lpParam;
 	pthread_t ThreadID;
-	//BOOL bReturn = SetEvent(m_hRunEvent);
 	pthread_create(&ThreadID, &attr,
 		ThreadFunc, &m_sThreadParam );
-	pthread_detach(ThreadID);//分离线程
+	pthread_detach(ThreadID);
 
 	pthread_attr_destroy(&attr);
 
@@ -144,7 +143,7 @@ void Thread::Msleep(int milliseconds)
 #ifndef _AIX
 	struct timeval tm;    
 	tm.tv_sec = 0; 
-	tm.tv_usec = milliseconds * 1000; //延时毫秒 
+	tm.tv_usec = milliseconds * 1000; 
 	select(0,NULL,NULL,NULL,&tm);
 #else
 	usleep(milliseconds*1000);

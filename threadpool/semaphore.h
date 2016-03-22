@@ -59,7 +59,7 @@ Semaphore::~Semaphore()
 }
 
 
-bool Semaphore::Post() // 给 指定的信号量 ++
+bool Semaphore::Post()
 {
 	if ( m_semaphore == 0 )
 	{
