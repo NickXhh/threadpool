@@ -1,8 +1,10 @@
 # threadpool
-this is a threadpool for sever , it can run at windows/linux/ios/android
+this is a threadpool for sever , 
+
+it can run at windows/linux/ios/android
 threadpool is writed by c++ 
 
-next i will show the code of threadpool for using
+# next - express process 
 
 	Process<T> m_Process;         
 	//定义一个处理器
@@ -35,7 +37,7 @@ next i will show the code of threadpool for using
 	//GetTask：从线程池的任务队列中去取空闲的任务，如果此时没有空闲的任务，则返回NULL，有的话，就返回空闲的任务指针。
 
 	
-# we should show the code to how to use,such as:
+# next - show the code about using
 
 	Process<int> m_Process;
 
